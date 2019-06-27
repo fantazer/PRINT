@@ -1,0 +1,106 @@
+//  ============================ Typography ============================
+
+//webfont('RUB', 'rouble-webfont', 'normal')
+//Add fotn rub write .rub a - (a,b,c,d - change type font)
+
+//font(name,file,size)
+
+font('Montserrat','Montserrat-Light',300)
+font('Montserrat','Montserrat-Regular',400)
+font('Montserrat','Montserrat-Bold',700)
+font('Montserrat','Montserrat-ExtraBold',900)
+
+$v-font =  'Montserrat', sans-serif
+
+typeSize(fontSm,font)
+	+below(768px)
+		font-size font px
+	font-size fontSm px
+
+/*
+font-size 14px
+@extend .type--sm
+
+font-size 20px
+@extend .type--main
+
+font-size 24px
+@extend .type--md
+
+font-size 30px
+@extend .type--lg
+
+font-size 40px
+@extend .type--xl
+*/
+
+.type--xs
+	typeSize(12,10)
+
+.type--sm
+	typeSize(14,12)
+
+.type--main
+	typeSize(16,14)
+
+.type--md
+	typeSize(18,15)
+
+.type--lg
+	typeSize(24,18)
+
+.type--xlg
+	typeSize(28,18)
+
+.type--xl
+	typeSize(36,24)
+
+.type--xxl
+	typeSize(84,48)
+
+.type--bold
+	font-weight bold
+
+h1
+	@extend .type--xl
+h2
+	@extend .type--lg
+h3
+	@extend .type--main
+h4
+	@extend .type--sm
+h5
+	@extend .type--xs
+
+a
+	color $link-color
+	text-decoration: none
+	tr(all)
+	&:hover
+		color $yellow
+	&:visiter
+		color darken($link-color,30)
+
+p
+	@extend .type--main
+
+.link--mark
+	color $blue
+	&:hover
+		color darken($mark,20)
+	&:visiter
+		color darken($mark,30)
+
+.link--main
+	color $link-color
+	hover-underline($link-color)
+	&:hover
+		color darken($link-color,20)
+	&:visiter
+		color darken($link-color,30)
+
+.link--text
+	color $link-color
+	text-decoration underline
+	&:hover
+		text-decoration none

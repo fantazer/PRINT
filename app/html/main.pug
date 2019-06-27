@@ -1,0 +1,83 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.page
+	.page-cont
+		.menu-line-wrap
+			.menu-line
+				+icon("menu","icon")
+		.content
+			.section.section--mid.section--full(style="background-image:url('img/section-1.jpg')")
+				.filter.filter--dark
+				.section-cont.section-cont--main
+					.main-cont
+						.section-title-line
+						.section-title-sub Изготовление печатной продукции:
+						.section-title воплощение <br> замысла <br> в тираже
+
+			//choose type
+			.choose
+				a.choose__el(style="background-image:url('img/choose-1.jpg')" href="#")
+					.filter.filter--white
+					.choose-content
+						.choose__el-head наше
+						.choose__el-title портфолио
+				a.choose__el(style="background-image:url('img/choose-2.jpg')" href="#")
+					.filter.filter--white
+					.choose-content
+						.choose__el-head наши
+						.choose__el-title продукция и услуги
+
+			//tech section
+			.section.section--extend(style="background-image:url('img/section-2.jpg')")
+				.filter.filter--dark
+				.main-cont
+					.section-title-line
+					.section-title технологии и оборудование
+					.tech
+						a(href="#").tech__el
+							.tech__el-icon
+								+icon("plus-fat","icon")
+							.tech__el-text Офсетное печатное оборудование
+						a(href="#").tech__el
+							.tech__el-icon
+								+icon("plus-fat","icon")
+							.tech__el-text Послепечатное оборудование
+						a(href="#").tech__el
+							.tech__el-icon
+								+icon("plus-fat","icon")
+							.tech__el-text Оборудование для производства  упаковки
+						a(href="#").tech__el
+							.tech__el-icon
+								+icon("plus-fat","icon")
+							.tech__el-text Широкоформатная печать
+						a(href="#").tech__el
+							.tech__el-icon
+								+icon("plus-fat","icon")
+							.tech__el-text Цифровая печать
+			//clients
+			.section.section--extend(style="background-image:url('img/section-3.jpg')")
+				.filter.filter--dark
+				.main-cont
+					.section-title-line
+					.section-title наши клиенты
+				.client-wrap
+					.main-cont
+						.client
+							- for (var i=0;i<2;i++)
+								.client__el
+									img(src="img/client-1.png", alt="")
+								.client__el
+									img(src="img/client-2.png", alt="")
+								.client__el
+									img(src="img/client-3.png", alt="")
+								.client__el
+									img(src="img/client-4.png", alt="")
+								.client__el
+									img(src="img/client-5.png", alt="")
+						a(href="#").client-more
+							.client-more__text все клиенты
+							+icon("arrow-down","icon")
+			+footer()
+include ./block_html/_script.pug

@@ -1,0 +1,18 @@
+mixin header()
+	//block header
+	.header-wrap
+		.main-cont
+			.header
+				a(href="/").logo
+					img(src="img/logo.svg", alt="")
+				.menu
+					a(href="#").menu__el Портфолио
+					a(href="#").menu__el Продукция и услуги
+					a(href="#").menu__el Технологии и оборудование
+				a(href="tel:+7 (495) 782 8362").phone +7 (495) 782 8362
+			.search
+				input(type="text" placeholder="Поиск по сайту …" class="input input-search")
+				input(type="submit" value="поиск" class="btn--md btn--mark search-get")
+	.menu-line
+		+icon("menu","icon")
+	//block header end
