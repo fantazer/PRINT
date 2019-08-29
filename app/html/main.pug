@@ -4,12 +4,10 @@ include block_html/_include.pug
 +header()
 .page
 	.page-cont
-		.menu-line-wrap
-			.menu-line
-				+icon("menu","icon")
+		+slideMenu()
 		.content
 			.section.section--mid.section--full(style="background-image:url('img/section-1.jpg')")
-				.filter.filter--dark
+				.filter-bg.filter--dark
 				.section-cont.section-cont--main
 					.main-cont
 						.section-title-line
@@ -19,23 +17,23 @@ include block_html/_include.pug
 			//choose type
 			.choose
 				a.choose__el(style="background-image:url('img/choose-1.jpg')" href="#")
-					.filter.filter--white
-					.choose-content
+					.filter-bg.filter--white
+					.choose-content(data-aos="fade-up"  data-aos-duration="1000")
 						.choose__el-head наше
 						.choose__el-title портфолио
 				a.choose__el(style="background-image:url('img/choose-2.jpg')" href="#")
-					.filter.filter--white
-					.choose-content
+					.filter-bg.filter--white
+					.choose-content(data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000")
 						.choose__el-head наши
 						.choose__el-title продукция и услуги
 
 			//tech section
 			.section.section--extend(style="background-image:url('img/section-2.jpg')")
-				.filter.filter--dark
+				.filter-bg.filter--dark
 				.main-cont
-					.section-title-line
-					.section-title технологии и оборудование
-					.tech
+					.section-title-line(data-aos="fade-right"  data-aos-duration="1000")
+					.section-title(data-aos="fade-up" data-aos-duration="1000") технологии и оборудование
+					.tech(data-aos="fade-down" data-aos-duration="1000")
 						a(href="#").tech__el
 							.tech__el-icon
 								+icon("plus-fat","icon")
@@ -58,13 +56,13 @@ include block_html/_include.pug
 							.tech__el-text Цифровая печать
 			//clients
 			.section.section--extend(style="background-image:url('img/section-3.jpg')")
-				.filter.filter--dark
+				.filter-bg.filter--dark
 				.main-cont
-					.section-title-line
-					.section-title наши клиенты
+					.section-title-line(data-aos="fade-right"  data-aos-duration="1000")
+					.section-title(data-aos="fade-up" data-aos-duration="1000") наши клиенты
 				.client-wrap
 					.main-cont
-						.client
+						.client(data-aos="fade-down" data-aos-duration="1000")
 							- for (var i=0;i<2;i++)
 								.client__el
 									img(src="img/client-1.png", alt="")

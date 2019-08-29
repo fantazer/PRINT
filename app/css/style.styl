@@ -16,7 +16,7 @@ body
 	color $main-text-color
 	line-height 1.2
 	letter-spacing 0.01em
-
+	background: $dark
 .main-cont
 	center(1200px,10px)
 
@@ -274,13 +274,12 @@ select.select-beauty
 
 // slide menu
 .head-toggle
-	size 50px
-	flex(mid)
 	cp()
-	+above(1025px)
-		display: none
+	position absolute
+	top 25px
+	right: 28px
 	.icon
-		size 25px
+		size 26px
 		fill white
 	.icon-close
 		display: none
@@ -292,37 +291,38 @@ select.select-beauty
 		display: none
 
 .slide-menu
-	+above(1025px)
-		display: none !important
-	+below(640px)
-		top: 51px //Высота хедера
 	+below(480px)
 		width: 100%
-	background: black
+	background: $yellow
 	color white
 	position: fixed
-	height: calc(100% - 50px) //Отступ хедер
+	height: 100% //Отступ хедер
 	z-index 1250
-	top 54px
-	right 0
-	padding: 25px
-	width: 320px
-	transform translateX(100%)
+	top 0
+	left 0
+	padding: 40px
 	tr(all)
+	transform translateX(calc(-500px + 80px))
+	width: 500px!important
 .slide-menu--open
 	transform translateX(0%)
 	overflow-y: auto
 .slide-menu__list
-	margin-bottom: 40px
+	margin 40px 0
+	ul
+		padding-left: 0
+		li
+			list-style none
 .slide-menu__list-el
 	display: block
 	margin-bottom: 40px
-	color white
-	font-size: 16px
+	color black
 	up()
 	tr(all)
+	font-size: 18px
+	font-weight: 700
 	&:hover
-		color red
+		color white
 .body-fix
 	position: fixed!important
 	overflow-Y: scroll!important
@@ -355,22 +355,31 @@ select.select-beauty
 	width: calc(100% - 80px)
 	padding-top: 40px
 	z-index 10
+	transform translateX(0)
+	tr()
+.header-wrap--open
+	transform translateX(420px)
+	-webkit-filter unquote("blur(2px)")
+	&:before
+		content ''
+		top 0
+		left 0
+		height: 100%
+		width: 100%
+		background: #222734db
+		position absolute
+		z-index 4
 
-.menu-line-wrap
-	width: 80px
 .menu-line
 	position: fixed
 	left 0
 	top 0
-	width: 80px
-	f()
-	justify-content: center
-	padding: 40px 10px
+	width: 100%
+	padding: 40px
 	height: 100vh
 	background: $yellow
 	z-index 10
-	.icon
-		size 30px
+
 
 .header
 	flex(between)
@@ -387,18 +396,25 @@ select.select-beauty
 .section--mid
 	flex(mid)
 .section--extend
-	padding: 15% 0
+	padding: 12% 0
 
+.section--extend-md
+	padding: 7% 0
+
+.section--white
+	background: white
 .section-cont--main
 	margin-top: 5%
 
-.filter
+.filter-bg
 	position: absolute
 	top 0
 	left 0
 	width: 100%
 	height: 100%
 .filter--dark
+	background: #070b1ade
+.filter--gray
 	background: #070b1ade
 .filter--white
 	background: #ffffffd6
@@ -425,6 +441,7 @@ select.select-beauty
 	f()
 .search-get
 	margin-left: -1px
+	up()
 
 .section-title
 	font-size: 92px
@@ -454,7 +471,20 @@ select.select-beauty
 
 .content
 	width: calc(100% - 80px)
-
+	transform translateX(80px)
+	tr()
+.content--open
+	transform translateX(500px)
+	-webkit-filter unquote("blur(2px)")
+	&:before
+		content ''
+		top 0
+		left 0
+		height: 100%
+		width: 100%
+		background: #222734db
+		position absolute
+		z-index 4
 .choose
 	f()
 	align-items: stretch
@@ -525,6 +555,10 @@ select.select-beauty
 	font-weight 700
 	font-size: 14px
 
+.tech__el-icon
+	.icon
+		fill $yellow
+
 .client-wrap
 	background: white
 	position: relative
@@ -568,3 +602,166 @@ select.select-beauty
 .footer-copyright
 	color white
 	opacity: .9
+
+
+.slide-menu-phone
+	font-weight: 700
+	@extend .type--lg
+	display block
+	margin: 30px 0
+	&:hover
+		color black
+.slide-menu-get
+	@extend .btn--md
+	@extend .btn--empty
+
+//form
+.input-row
+	margin-bottom: 20px
+	.input
+		width: 100%
+.input-row__title
+	margin-bottom: 10px
+.input-cont
+	display: grid
+	grid-gap 20px
+.input-cont--two
+	grid-template-columns: 1fr 1fr
+	+below(640px)
+		grid-template-columns: 1fr
+.input-cont--three
+	grid-template-columns: 1fr 1fr 1fr
+	+below(640px)
+		grid-template-columns: 1fr
+
+//checkbox remember
+.login-remember
+	.style-label
+		+below(768px)
+			align-items: flex-start
+	.sytle-input-text
+		font-size: 14px
+		color black
+		width: calc(100% - 80px)
+		line-height: 1.6
+		a
+			color $mark
+	margin-bottom: 20px
+
+.input-get
+	f()
+	align-items stretch
+	margin-bottom: 20px
+	.input
+		border-radius 5px 0 0 5px
+.input-get__btn
+	position relative
+	.icon
+		position absolute
+		size 14px
+		fill white
+		top 50%
+		left 50%
+		margin-left: -7px
+		margin-top: -7px
+	.input-get__btn-el
+		height: 100%
+		background: $mark
+		border-radius 0 5px 5px 0
+		border 0
+		width: 60px
+		&:hover
+			background: darken($mark,5)
+
+//form
+
+.about
+	f()
+	justify-content space-between
+.about__title
+	width: 30%
+	font-size: 42px
+	font-weight: 700
+	up()
+.about__text
+	width: 65%
+
+.text
+	p
+		line-height: 1.6
+	li
+		line-height: 1.6
+
+.galary-head
+	display: grid
+	grid-gap 10px
+	grid-template-columns: repeat(4, 1fr)
+	margin-top: 10%
+.galary-head__el
+	padding: 70px 40px
+	flex(mid)
+	fl()
+	background: #ffffff1a
+	cp()
+	tr()
+	&:hover
+		background: rgba(171, 171, 171, 0.1)
+.galary-head__el--active
+	background: none
+	border 1px solid $border-color
+.galary-head__el-icon
+	.icon
+		size 60px
+		margin-bottom: 20px
+.galary-head__el-text
+	color white
+	font-weight: 700
+	font-size: 18px
+	text-align center
+	line-height: 1.6
+
+.galary-wraper
+	display: grid
+	grid-gap 0
+	grid-template-columns: repeat(3, 1fr)
+	width: 100%
+
+.mix-el
+	bg-full()
+	position relative
+	padding: 25% 10%
+	cp()
+	&:hover
+		.mix-filter
+			opacity: 0
+		.mix-content
+			opacity: 0
+.mix-filter
+	position absolute
+	background: #070b1ac2
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	opacity: 1
+	tr()
+.mix-content
+	position absolute
+	bottom 0
+	left 0
+	width: 100%
+	z-index 5
+	color white
+	padding: 30px
+	opacity: 1
+	tr()
+.mix-line
+	height: 3px
+	background: $yellow
+	width: 30px
+	margin-bottom: 10px
+.mix-type
+	margin-bottom: 5px
+.mix-val
+	font-weight: 700
+	@extend .type--lg

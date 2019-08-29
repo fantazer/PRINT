@@ -1,3 +1,28 @@
+mixin slideMenu()
+  .menu-line-wrap.slide-menu
+    .menu-line
+      .head-toggle
+        +icon("menu","icon icon-open")
+        +icon("close-fat","icon icon-close")
+      .slide-menu__list
+        ul
+          li
+            a(href="#").slide-menu__list-el Главная
+          li
+            a(href="#").slide-menu__list-el О компании
+          li
+            a(href="#").slide-menu__list-el Продукция и услуги
+          li
+            a(href="#").slide-menu__list-el Технологии и оборудование
+          li
+            a(href="#").slide-menu__list-el Технические требования
+          li
+            a(href="#").slide-menu__list-el Наши клиенты
+          li
+            a(href="#").slide-menu__list-el Контакты
+      a(href="tel:+7 (495) 782 8362").slide-menu-phone +7 (495) 782 8362
+      .slide-menu-get Заказать звонок
+
 mixin icon(name,cls)
   svg(class=cls)
     use(xlink:href="#" + name)

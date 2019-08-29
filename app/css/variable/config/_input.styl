@@ -1,17 +1,19 @@
 // === Inputs ===
 .input,.textarea,.select
 	padding 18px 15px
-	border 1px solid $border-color
+	border 1px solid $yellow
 	resize: none
 	outline: 0 !important
 	font-family $v-font
 	display block!important
 	placeholder(#888888)
-	background: #f6f6f6
+	background: none
 	tr(all)
+	color white
 	&:focus
+		color black
 		border 1px solid $mark
-		background: white
+		background: $yellow
 
 .style-label
 	display flex
@@ -87,3 +89,7 @@
 	line-height: 1.6
 	a
 		color $mark
+
+.map
+	background: lighten($dark,5)
+	padding: 20% 10%

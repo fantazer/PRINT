@@ -1,11 +1,11 @@
 // ============================ Buttons ============================
 .btn
-	up()
 	tr(all)
 	display inline-block
 	background none
 	border 0
 	text-align: center
+	font-weight: 700
 	&:hover
 		cursor pointer
 
@@ -67,6 +67,22 @@
 	.nav-icon
 		fill rgba(255, 255, 255, 0.9)
 
+.btn--empty
+	@extend .btn
+	border 1px solid black
+	color black
+	&:hover
+		background: black
+		color white
+
+.btn--yellow
+	@extend .btn
+	border 1px solid $yellow
+	color $yellow
+	&:hover
+		background: $yellow
+		color black
+
 .btn--icon
 	flex(mid)
 
@@ -79,4 +95,29 @@
 
 .nav-icon--right
 	margin-rihgt 10px
+
+
+.contact-wrap
+	f()
+	justify-content space-between
+.contact-info
+	width: 30%
+.contact-form
+	width: 50%
+
+.contact-val
+	@extend .type--xlg
+	line-height: 1.6
+	color white
+	margin-bottom: 40px
+.contact-copyright
+	color white
+	@extend .type--lg
+
+.contact-phone
+	@extend .type--xl
+	font-weight: 700
+	color $yellow
+	display block
+	margin-bottom: 40px
 

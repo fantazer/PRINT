@@ -1,0 +1,43 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.page
+	.page-cont
+		+slideMenu()
+		.content
+			.section.section--mid.section--extend(style="background-image:url('img/bg-birds.jpg')")
+				.filter-bg.filter--dark
+				.section-cont.section-cont--main
+					.main-cont
+						.section-title-line
+						.section-title контакты
+
+			.section.section--dark.section--extend-md
+				.main-cont
+					.contact-wrap
+						.contact-info
+							.section-title-line(data-aos="fade-right"  data-aos-duration="1000")
+							a(href="tel:+7 (495) 782 8362").contact-phone +7 (495) 782 8362
+							.contact-val Москва, 109382, <br> Вольная, 19 <br> Тел.: +7 (495) 782 83 62 <br> info@elisprint.ru
+							.contact-copyright © 2018 ООО «Элис-принт»
+						.contact-form
+							form(action="#" class="forms")
+								.input-row
+									input(type="text" placeholder="Ваше имя" class="input")
+								.input-row
+									input(type="text" placeholder="Ваше номер телефона" class="input")
+								.input-row
+									input(type="text" placeholder="Название компании" class="input")
+								.input-row
+									input(type="text" placeholder="Email" class="input")
+								.input-row
+									textarea(name="text", cols="30", rows="10" class="input" placeholder="Сообщение")
+								.input-row
+									input(type="submit" value="Отправить"  class="btn--md btn--yellow")
+
+			.section.section-map
+				.map
+					.map__el
+			+footer()
+include ./block_html/_script.pug

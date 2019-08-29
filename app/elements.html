@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
     <!--link(rel="stylesheet", href="bower/jquery-nice-select/css/nice-select.css")-->
+    <link rel="stylesheet" href="bower/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower/aos/dist/aos.css" />
     <!--endbuild-->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style-edit.css" />
@@ -368,6 +370,18 @@
             </div>
             <div class="element-list-svg__icon">
                 <svg class="icon-el">
+                    <use xlink:href="#monitor"></use>
+                </svg>
+                <div class="element-list-svg__name">monitor</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#pan"></use>
+                </svg>
+                <div class="element-list-svg__name">pan</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
                     <use xlink:href="#phone-call"></use>
                 </svg>
                 <div class="element-list-svg__name">phone-call</div>
@@ -395,6 +409,18 @@
                     <use xlink:href="#repeat"></use>
                 </svg>
                 <div class="element-list-svg__name">repeat</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#rocket"></use>
+                </svg>
+                <div class="element-list-svg__name">rocket</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#rule"></use>
+                </svg>
+                <div class="element-list-svg__name">rule</div>
             </div>
             <div class="element-list-svg__icon">
                 <svg class="icon-el">
@@ -513,10 +539,12 @@
         </div>
     </div>
     <!--build:js js/combined.js-->
-    <script src="bower/jquery/dist/jquery.js">
-        <script src="bower/slick-carousel/slick/slick.js">
-    </script>
-    </script>
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/slick-carousel/slick/slick.js"></script>
+    <script src="bower/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="bower/gsap/src/minified/TimelineMax.min.js"></script>
+    <script src="bower/aos/dist/aos.js"></script>
+    <script src="bower/mixitup/dist/mixitup.js"></script>
     <!-- endbuild-->
     <script src="js/add-on.js"></script>
     <script src="js/script.js"></script>
