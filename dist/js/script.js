@@ -152,8 +152,9 @@ $(document).ready(function () {
 		horizontal: false
 	});*/
 	AOS.init({
-		offset: 100,
-		mirror: "true"
+		offset: 350,
+		mirror: "true",
+		delay:200
 	});
 	// animate === end
 	

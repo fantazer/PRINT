@@ -396,7 +396,7 @@ select.select-beauty
 .section--mid
 	flex(mid)
 .section--extend
-	padding: 12% 0
+	padding: 10% 0
 
 .section--extend-md
 	padding: 7% 0
@@ -405,6 +405,12 @@ select.select-beauty
 	background: white
 .section-cont--main
 	margin-top: 5%
+
+.section--white-extend
+	background: white
+	position: relative
+	margin-top: 5%
+	padding: 100px 0
 
 .filter-bg
 	position: absolute
@@ -689,6 +695,8 @@ select.select-beauty
 .text
 	p
 		line-height: 1.6
+		&:first-child
+			margin-top: 0
 	li
 		line-height: 1.6
 
@@ -765,3 +773,31 @@ select.select-beauty
 .mix-val
 	font-weight: 700
 	@extend .type--lg
+
+
+.production
+	display: grid
+	grid-gap 50px
+	grid-template-columns: repeat(4, 1fr)
+	margin-top: 60px
+.production__el
+	padding: 20px
+	border-left 1px solid $border-color
+	color white
+.production__el-title
+	up()
+	@extend .type--md
+	font-weight: 700
+	margin-bottom: 20px
+.production__el-text
+	line-height: 1.6
+	font-size: 14px
+
+.product-wrap
+	display: grid
+	grid-gap 40px
+	grid-template-columns: repeat(3, 1fr)
+
+.product-img
+	bg-full()
+	padding: 40% 10%
