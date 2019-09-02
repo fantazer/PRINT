@@ -1,0 +1,101 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.page
+	.page-cont
+		+slideMenu()
+		.content
+			.section.section--mid.section--extend(style="background-image:url('img/bg-print.jpg')")
+				.filter-bg.filter--gray
+				.section-cont.section-cont--main
+					.main-cont
+						.section-title-line
+						//.section-title-sub Lorem ipsum dolor sit amet
+						.section-title технологии и оборудование
+
+			.section
+				.section--white
+					.main-cont
+						.tech
+							.tech-cont
+								.tech-title-row
+									.tech-title-icon
+										+icon("plus-fat","icon")
+									.tech-title-text офсетное печатное оборудование
+								.tech-img(style="background-image:url('img/printer-1.jpg')")
+							.tech-text.text
+								ul
+									li Печатная машина формата 540x740 мм
+										<br>
+											strong Heidelberg CD 74-5 P+L-C
+									li Печатная машина формата 530x740 мм
+										<br>
+											strong Heidelberg Speedmaster SM 74-4+L
+									li Печатная машина формата 530x740 мм
+										<br>
+											strong Heidelberg Speedmaster SM 74-4
+									li Печатная машина формата 360x520 мм
+										<br>
+											strong Heidelberg Speedmaster 52-4+L
+						.tech
+							.tech-cont
+								.tech-title-row
+									.tech-title-icon
+										+icon("plus-fat","icon")
+									.tech-title-text послепечатное оборудование
+								.tech-img(style="background-image:url('img/printer-2.jpg')")
+							.tech-text.text
+								ul
+									li Брошюровальный комплекс
+										<br>
+										strong Horizon Stichliner 5500
+									li Брошюровальный станок ВШРА
+										<br>
+										strong Heidelberg ST100
+									li Автоматический ламинатор А2 формата
+										<br>
+										strong KOMFI DELTA
+									li Фальцевальный станок
+										<br>
+										strong Heidelberg Stahlfolder Ti 52 Proline
+									li Фальцевальный станок
+										<br>
+										strong Horizon AFC-746DPEU
+									li Резальный аппарат
+										<br>
+										strong POLAR XT 115
+									li Перфорирующая машина
+										<br>
+										strong Autopunch 360 manual
+									li Переплетный станок
+										<br>
+										strong Renz AUTOBIND 500
+
+						.tech
+							.tech-cont
+								.tech-title-row
+									.tech-title-icon
+										+icon("plus-fat","icon")
+									.tech-title-text широкоформатная печать
+								.tech-img(style="background-image:url('img/printer-4.jpg')")
+							.tech-text.text
+								ul
+									li  <strong>MIMAKI JV300-160</strong> <br> Широкоформатный сублимационный плоттер, с максимальной шириной печати 1600 мм<br>
+									li <strong>Epson Stylus Pro 9890</strong> <br> Широкоформатный принтер, с максимальной шириной носителя 1118 мм, и 9-ти цветной пьезоэлектрической струйной технологией печати
+									li  <strong>MIMAKI CG-130 SRIII</strong> <br> Новейший профессиональный режущий плоттер (каттер)<br> для высокоточной скоростной контурной резки
+									li  <strong>Рулонный ламинатор GMP EXCELAM-Q 1100</strong> <br> Широкоформатный рулонный ламинатор для холодного и горячего<br> ламинирования, а также прикатки на пластик.
+						.tech
+							.tech-cont
+								.tech-title-row
+									.tech-title-icon
+										+icon("plus-fat","icon")
+									.tech-title-text цифровая печать
+								.tech-img(style="background-image:url('img/printer-5.jpg')")
+							.tech-text.text
+								ul
+									li <strong>Konica Minolta bizhub PRESS C1085</strong><br> Флагманская модель Konica Minolta для цифровой цветной печати
+									li <strong>RICOH 7100</strong><br>Новые возможности коммерческой и корпоративной печати
+
+			+footer()
+include ./block_html/_script.pug

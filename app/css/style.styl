@@ -531,6 +531,7 @@ select.select-beauty
 	tr(all)
 	position: relative
 	overflow: hidden
+	width: 25%
 	&:before
 		content ''
 		tr(all)
@@ -801,3 +802,35 @@ select.select-beauty
 .product-img
 	bg-full()
 	padding: 40% 10%
+
+.tech
+	f()
+	justify-content space-between
+	margin: 80px 0
+	padding-bottom: 40px
+	border-bottom 1px solid $border-color
+	&:last-child
+		border-bottom 0
+.tech-cont
+	width: 40%
+.tech-title-row
+	f()
+	margin-bottom: 30px
+.tech-title-icon
+	margin-right: 30px
+	.icon
+		size 60px
+		fill $yellow
+.tech-title-text
+	@extend .type--xl
+	font-weight: 700
+	up()
+	line-height: 1.6
+.tech-img
+	bg-full()
+	padding: 25% 10%
+.tech-text
+	width: 50%
+	font-size: 14px
+	li
+		margin-bottom: 10px
