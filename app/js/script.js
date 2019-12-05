@@ -78,7 +78,7 @@ $(document).ready(function () {
 
 	$('.head-toggle').click(function (event) {
 		event.stopPropagation();
-		$(this).toggleClass('head-toggle--open');
+		$('.head-toggle').toggleClass('head-toggle--open');
 		$('.slide-menu').toggleClass('slide-menu--open');
 		$('.content').toggleClass('content--open');
 		$('.header-wrap').toggleClass('header-wrap--open');
@@ -152,9 +152,9 @@ $(document).ready(function () {
 		horizontal: false
 	});*/
 	AOS.init({
-		offset: 350,
+		offset: 140,
 		mirror: "true",
-		delay:200
+		delay:100
 	});
 	// animate === end
 	
