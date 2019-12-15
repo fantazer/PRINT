@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
-// nice select
-	//$('.select-beauty').niceSelect();
-// nice select === end
+	$("a[rel='m_PageScroll2id']").mPageScroll2id({
+			offset:100,
+			highlightClass:"left-nav-el-active",
+	});
 
 //closeModal() - закрыть окна
 //initModal('data-name-attr') - Открыть нужное окно
@@ -29,6 +30,13 @@ $(document).ready(function () {
 			});
 		}
 		modalState.isModalShow = true;
+
+		$('.head-toggle').removeClass('head-toggle--open');
+		$('.slide-menu').removeClass('slide-menu--open');
+		$('.content').removeClass('content--open');
+		$('.header-wrap').removeClass('header-wrap--open');
+		$('body').removeClass('body-fix')
+
 	};
 	var closeModal = function () {
 		$('.modal-layer').removeClass('modal-layer-show');
@@ -171,4 +179,80 @@ $(document).ready(function () {
 		$(this).toggleClass('galary-head__el--active');
 	});
 	// active sort el === end
+
+	//validate
+	jQuery.validator.addMethod("getPhone", function(value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional( element ) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){5,18}(\s*)?$/.test( value );
+		}, 'Введите правильный номер телефона');
+	$('.validate-form').each(function () {
+		var curentForm = $(this);
+		$(this).validate({
+			highlight: function (element) { //даем родителю класс если есть ошибка
+				$(element).parent().addClass("field-error");
+			},
+			unhighlight: function (element) {
+				$(element).parent().removeClass("field-error");
+			},
+			rules: { //правила для полей
+				name: {
+					required: true,
+				},
+				phone: {
+					required: true,
+					minlength: 5,
+					getPhone: true
+				},
+				comment: {
+					required: true,
+					minlength: 5,
+				},
+				agree: {
+					required: true
+				}
+			},
+			messages: {
+				name: {
+					required: 'Обязательное поле',
+				},
+				phone: {
+					required: 'Обязательное поле',
+					number: 'Введите правильный номер',
+					minlength: 'Номер должен быть длиннее',
+				},
+				comment: {
+					required: 'Обязательное поле',
+					minlength: 'Сообщение должно быть длиннее',
+				},
+				agree: {
+					required: false,
+				}
+			},
+			submitHandler: function (form) {
+				$.ajax({ //отправка ajax
+					type: "POST",
+					url: "sender.php",
+					data: $(form).serialize(),
+					timeout: 3000,
+				});
+				closeModal();
+				initModal("truemessage");
+				setTimeout(function () {
+					closeModal();
+					$(':input', '.validate-form') //очитска формы от данных
+						.not(':button, :submit, :reset, :hidden')
+						.val('')
+						.removeAttr('checked')
+						.removeAttr('selected')
+				}, 2500)
+
+			}
+		});
+	});
+
+	$('.fancybox').fancybox({
+		thumbs : {
+			autoStart : true
+		}
+	});
 });

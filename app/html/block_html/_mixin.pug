@@ -21,7 +21,7 @@ mixin slideMenu()
           li
             a(href="#").slide-menu__list-el Контакты
       a(href="tel:+7 (495) 782 8362").slide-menu-phone +7 (495) 782 8362
-      .slide-menu-get Заказать звонок
+      div(data-modal="order").slide-menu-get.modal-get Заказать звонок
 
 mixin icon(name,cls)
   svg(class=cls)

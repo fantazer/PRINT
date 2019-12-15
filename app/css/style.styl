@@ -25,7 +25,7 @@ body
 	width: 100%
 	height: 100vh
 	position: fixed
-	z-index 1000
+	z-index 2000
 	top 0
 	left 0
 	visibility: hidden
@@ -72,11 +72,10 @@ body
 		overflow-y scroll
 		width: 100%!important
 		br(0)
-	background: white
+	color white
 	position: relative
 	padding: 40px
-	br(10px)
-
+	background: black
 .modal__show
 	max-height 100%
 	opacity 1
@@ -92,9 +91,8 @@ body
 	right: 20px
 	cp()
 	.icon
-		size 12px
-		fill black
-		opacity:.3
+		size 18px
+		fill white
 
 .modal-open
 	overflow: hidden
@@ -108,7 +106,7 @@ body
 .modal-wrap
 	position: fixed
 	width: 100%
-	height: 100%
+	height: 100vh
 	overflow-y auto
 	flex(mid)
 
@@ -117,7 +115,9 @@ body
 		font-size: 20px
 	margin-bottom: 20px
 	text-align: center
-	color black
+	color white
+	font-weight:700
+	font-size: 20px
 
 .modal-text
 	+below(768px)
@@ -149,7 +149,7 @@ body
 
 .agree-row__text
 	width: 100%
-	color black
+	color white
 	font-size: 12px
 	a
 		color #9c9a9a
@@ -157,8 +157,8 @@ body
 
 .field-error
 	.error
-		display: none!important
-
+		color red
+		font-size: 12px
 .field-error
 	input
 		border 1px solid #dc3d3d
@@ -169,9 +169,8 @@ body
 .modal-content--true
 	flex(mid)
 	fl()
-	br(10px)
 	.icon
-		fill green
+		fill $mark
 		size 120px
 		margin-bottom: 20px
 
@@ -317,19 +316,19 @@ select.select-beauty
 		padding-left: 0
 		li
 			list-style none
-.slide-menu__list-el
-	+below(640px)
-		font-size: 14px
-		margin-bottom: 20px
-	display: block
-	margin-bottom: 40px
-	color black
-	up()
-	tr(all)
-	font-size: 18px
-	font-weight: 700
-	&:hover
-		color white
+	a
+		+below(640px)
+			font-size: 14px
+			margin-bottom: 20px
+		display: block
+		margin-bottom: 40px
+		color black
+		up()
+		tr(all)
+		font-size: 18px
+		font-weight: 700
+		&:hover
+			color white
 .body-fix
 	position: fixed!important
 	overflow-Y: scroll!important
@@ -402,7 +401,8 @@ select.select-beauty
 		justify-content initial
 	+below(640px)
 		margin-bottom:0
-	flex(between)
+		align-items center
+	f()
 	margin-bottom: 40px
 	.head-toggle
 		+above(1025px)
@@ -413,8 +413,10 @@ select.select-beauty
 .logo
 	+below(640px)
 		width: 80px
-	margin-right auto
-
+		margin-right auto
+	margin-right: 5%
+	img
+		width: 150px
 .section
 	position: relative
 	bg-full()
@@ -433,7 +435,7 @@ select.select-beauty
 	flex(mid)
 .section--extend
 	+below(640px)
-		padding-top: 20px
+		padding-top: 60px
 	padding: 10% 0
 
 .section--extend-md
@@ -443,9 +445,9 @@ select.select-beauty
 	background: white
 .section-cont--main
 	+below(640px)
-		margin-top: 0
+		margin-top: -30px
 		.section-title
-			font-size: 11vw
+			font-size: 32px
 	margin-top: 5%
 	width: 100%
 .section--white-extend
@@ -475,7 +477,7 @@ select.select-beauty
 	+below(1024px)
 		display none
 	flex(between)
-	width: 55%
+	width: 50%
 
 .menu__el
 	color #ffffff
@@ -484,7 +486,8 @@ select.select-beauty
 
 .phone
 	+below(640px)
-		font-size: 12px
+		font-size: 16px
+	margin-left auto
 	color #ffffff
 	@extend .type--xlg
 	font-weight 700
@@ -502,16 +505,16 @@ select.select-beauty
 	up()
 
 .section-title
-	+below(1024px)
-		font-size: 8vw
+	+below(1440px)
+		font-size: 6vw
 	+below(640px)
 		font-size: 8vw
 		line-height: 1.4
-	font-size: 92px
-	font-weight: 700
+	font-size: 6vw
+	font-weight: 900
 	color white
 	up()
-	line-height: 1.2
+	line-height: 1
 
 .section-title-sub
 	+below(1024px)
@@ -519,7 +522,7 @@ select.select-beauty
 	+below(640px)
 		font-size: 4vw
 	color #ffffff
-	font-size 38px
+	font-size 42px
 	font-weight 400
 	margin-bottom: 20px
 
@@ -527,6 +530,7 @@ select.select-beauty
 	+below(640px)
 		width: 80px
 		height: 10px
+		margin-bottom: 20px
 	height: 15px
 	width: 120px
 	background: $yellow
@@ -547,6 +551,8 @@ select.select-beauty
 	transform translateX(80px)
 	tr()
 .content--open
+	+below(640px)
+		-webkit-filter none
 	transform translateX(500px)
 	-webkit-filter unquote("blur(2px)")
 	&:before
@@ -572,8 +578,9 @@ select.select-beauty
 	width: 50%
 	display: block
 	position: relative
-	padding: 10% 10%
+	padding: 9% 5%
 	flex(mid)
+	border 10px solid white
 .choose-content
 	position: relative
 	z-index 5
@@ -594,14 +601,12 @@ select.select-beauty
 	+below(640px)
 		font-size: 28px
 	color #000000
-	font-size 66px
+	font-size 4vw
 	font-weight 900
 	up()
 
 
 .tech__el
-	+below(1024px)
-		width: 33%
 	+below(640px)
 		width: 100%
 		padding: 20px 20px 40px 20px
@@ -611,7 +616,7 @@ select.select-beauty
 	tr(all)
 	position: relative
 	overflow: hidden
-	width: 25%
+	width: 100%
 	&:before
 		content ''
 		tr(all)
@@ -665,7 +670,9 @@ select.select-beauty
 	grid-template-columns: repeat(5, 1fr)
 .client__el
 	flex(mid)
-
+	height: 50px
+	img
+		height: 100%
 .client-more
 	+below(640px)
 		margin-top: 60px
@@ -901,6 +908,8 @@ select.select-beauty
 		grid-template-columns: repeat(2, 1fr)
 	+below(640px)
 		grid-template-columns: 1fr
+		grid-gap 0
+		margin-top: 20px
 	display: grid
 	grid-gap 50px
 	grid-template-columns: repeat(4, 1fr)
@@ -909,6 +918,7 @@ select.select-beauty
 	+below(640px)
 		border-left 0
 		border-bottom 1px solid $border-color
+		padding-bottom: 30px
 		&:last-child
 			border 0
 	padding: 20px
@@ -924,22 +934,19 @@ select.select-beauty
 	font-size: 14px
 
 .product-wrap
-	+below(1024px)
-		f()
-		fw()
-		justify-content space-between
-	display: grid
-	grid-gap 40px
-	grid-template-columns: repeat(3, 1fr)
+	f()
+	fw()
+	justify-content space-between
 
 .product-col
 	+below(1024px)
 		width: 48%
 		margin-bottom: 20px
-		&:last-child
+		&:nth-child(3)
 			width: 100%
-
-
+	width: 24%
+	&:nth-child(3)
+		width: 45%
 .product-img
 	bg-full()
 	padding: 40% 10%
@@ -949,34 +956,54 @@ select.select-beauty
 .tech
 	+below(1024px)
 		fw()
+		grid-template-columns: repeat(3, 1fr)
 	+below(768px)
 		margin: 30px 0
 		padding-bottom: 0
-	f()
+	+below(640px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(420px)
+		grid-template-columns: 1fr
 	margin: 80px 0
 	padding-bottom: 40px
 	border-bottom 1px solid $border-color
+	display: grid
+	grid-gap 2vw
+	grid-template-columns: repeat(5, 1fr)
 	&:last-child
 		border-bottom 0
 .tech-cont
-	width: 40%
+	+below(640px)
+		width: 100%
+	width: 50%
 .tech-title-row
+	+below(640px)
+		fw()
 	f()
 	margin-bottom: 30px
 .tech-title-icon
 	margin-right: 30px
 	.icon
+		+below(640px)
+			size 40px
+			margin-bottom: 10px
 		size 60px
 		fill $yellow
 .tech-title-text
+	+below(640px)
+		width: 100%
 	@extend .type--xl
 	font-weight: 700
 	up()
 	line-height: 1.6
 .tech-img
 	bg-full()
+	background-size contain
 	padding: 25% 10%
 .tech-text
+	+below(640px)
+		width: 100%
+		padding-bottom: 30px
 	width: 50%
 	font-size: 14px
 	li
@@ -1014,3 +1041,4 @@ select.select-beauty
 	color $yellow
 	display block
 	margin-bottom: 40px
+	

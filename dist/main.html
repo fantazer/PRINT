@@ -87,7 +87,7 @@
                         </ul>
                     </div>
                     <a class="slide-menu-phone" href="tel:+7 (495) 782 8362">+7 (495) 782 8362</a>
-                    <div class="slide-menu-get">Заказать звонок</div>
+                    <div class="slide-menu-get modal-get" data-modal="order">Заказать звонок</div>
                 </div>
             </div>
             <div class="content">
@@ -233,6 +233,58 @@
                             <div class="footer-copyright">© 2018 ООО «Элис-принт»</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-layer">
+        <div class="modal-filter"></div>
+        <div class="modal-wrap">
+            <div class="modal" data-modal="order">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <div class="modal-title">Оставьте заявку</div>
+                    <form class="validate-form" action="javascript:void(null);">
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Ваше имя" />
+                        </div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="phone" placeholder="Ваш телефон" />
+                        </div>
+                        <div class="input-row">
+                            <textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
+                        </div>
+                        <div class="agree-row">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="sytle-input" type="checkbox" name="agree" />
+                                    <div class="sytle-input-element">
+                                        <svg class="icon-check">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="sytle-input-text"></div>
+                                </label>
+                            </div>
+                            <div class="agree-row__text">Согласен с
+                                <a href="#">условиями обработки персональных данных</a>
+                            </div>
+                        </div>
+                        <input class="modal-send" type="submit" value="Отправить заявку" />
+                    </form>
+                </div>
+            </div>
+            <!--success message-->
+            <div class="modal" data-modal="truemessage">
+                <div class="modal-content modal-content--true">
+                    <svg class="icon">
+                        <use xlink:href="#interface"></use>
+                    </svg>
+                    <div class="modal-text-true">Ваша заявка принята</div>
                 </div>
             </div>
         </div>

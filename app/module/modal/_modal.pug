@@ -7,8 +7,7 @@ mixin modal()
 					.modal-close
 						+icon("close","icon")
 					.modal-title Оставьте заявку
-					.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
-					form.validate-form( action="javascript:void(null);")
+					form.validate-form(action="javascript:void(null);")
 						.input-row
 							input(type="text" name="name" placeholder="Ваше имя").input
 						.input-row
@@ -31,5 +30,4 @@ mixin modal()
 					+icon("interface","icon")
 					.modal-text-true Ваша заявка принята
 
-	a(href="#" data-modal="order").modal-get Открыть модальное окно
 
