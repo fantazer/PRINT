@@ -56,6 +56,6 @@
     "gulp-html-prettify": "0.0.1"
   },
   "dependencies": {
-    "gulp-favicons": "^2.2.7"
+    "gulp-favicons": "^4.0.1"
   }
 }
